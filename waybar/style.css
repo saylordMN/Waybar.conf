@@ -1,0 +1,98 @@
+@import url("file:///home/albert/.cache/wal/colors-waybar.css");
+
+/* Global font */
+* {
+    font-size: 16px;
+    font-family: "CodeNewRoman Nerd Font Propo", monospace;
+}
+
+window#waybar {
+    all: unset;
+}
+
+/* Module containers */
+.modules-left,
+.modules-center,
+.modules-right {
+    padding: 7px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.45);   /* semi-transparent black */
+    box-shadow: 0 1.5px 3px @color9; /* smaller shadow, same as active border */
+    border: 4.5px solid @color9;     /* 3× thicker border */
+}
+
+.modules-left { margin: 10px 0 5px 10px; }
+.modules-center { margin: 10px 0 5px 0; }
+.modules-right { margin: 10px 10px 5px 0; }
+
+/* Tooltip */
+.tooltip {
+    background: @background-alpha;
+    color: @foreground;  /* override in colors-waybar.css as white */
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 1.5px 3px @color9;
+}
+
+/* Workspace buttons */
+#workspaces button {
+all: unset;
+padding: 0px 5px;
+color: @foreground;  /* white text */
+transition: all .2s ease;
+}
+
+#workspaces button.active {
+color: @foreground;  /* white text */
+border: none;
+text-shadow: 0 0 1px @color9;
+}
+
+#workspaces button.empty {
+color: @foreground;  /* white text */
+border: none;
+}
+
+#workspaces button.empty.active {
+color: @foreground;  /* white text */
+text-shadow: 0 0 1px @color9;
+}
+
+/* Modules */
+#clock,
+#battery,
+#network,
+#cpu,
+#memory,
+#temperature {
+padding: 0px 5px;
+color: @foreground;  /* white text */
+transition: all .3s ease;
+}
+
+/* Battery states */
+#battery.charging { color: @foreground; }
+#battery.warning:not(.charging) { color: @foreground; }
+#battery.critical:not(.charging) { color: @foreground; }
+
+/* Tray */
+#tray,
+#tray menu *,
+#tray menu separator {
+padding: 0px 5px;
+transition: all .3s ease;
+color: @foreground;  /* white text */
+}
+
+/* Custom expand */
+#custom-expand {
+padding: 0px 5px;
+color: @foreground;  /* white text */
+text-shadow: 0 0 1px @color9;
+transition: all .3s ease;
+}
+
+#custom-expand:hover {
+color: @foreground;  /* white text */
+text-shadow: 0 0 1px @color9;
+}
