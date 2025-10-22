@@ -1,0 +1,77 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 24,
+  "spacing": 0,
+  "margin-top": -1,
+  "margin-bottom": -10,
+  "margin-right": 5,
+  "margin-left": 5,
+  // Left
+  "modules-left": ["hyprland/workspaces"],
+
+  "hyprland/workspaces": {
+    "format": "{id}{windows}",
+    "format-icons": {},
+    "show-special": true,
+
+    "format-window-separator": "",
+    "window-rewrite-default": "",
+    "window-rewrite": {
+      "class<com.mitchellh.ghostty> title<.*nvim .*>": " ", //   
+      "title<.*YouTube.*>": " ",
+      "class<kitty>": " ",
+      "class<com.mitchellh.ghostty>": " ",
+      "class<org.telegram.desktop>": " ",
+      "class<steam>": " ",
+      "class<discord>": " ",
+      "class<obsidian>": " 󱚌",
+      "class<firefox>": " ",
+      "class<TradingView>": " ",
+    },
+  },
+
+  // Center
+  "modules-center": ["clock"],
+  "clock": {
+    "format": "{:%H:%M:%S}",
+    "format-alt": "{:%d.%m.%Y}",
+    "tooltip": false,
+    "interval": 1
+  },
+
+  // Right
+  "modules-right": [
+    "tray",
+    "cpu",
+    "memory",
+    "pulseaudio",
+    "custom/button",
+  ],
+
+  "tray": {
+    "spacing": 10
+  },
+
+  "cpu": {
+    "format": " {usage}%",
+    "on-click": "kitty btop"
+  },
+
+  "memory": {
+    "format": " {used:0.1f}Gb",
+    "on-click": "kitty btop"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}{volume}",
+    "format-icons": {
+      "default": [" ", " ", " "]
+    }
+  },
+
+  "custom/button": {
+    "format": "",
+  "on-click": "kitty sudo poweroff"
+  }
+}
