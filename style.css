@@ -1,0 +1,74 @@
+@import "/home/albert/.cache/wal/colors-waybar.css";
+
+* {
+    font-family: Symbols Nerd Font, DejaVu Sans, sans-serif;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#waybar {
+padding: 0px;
+margin: 10px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/*-----module groups----*/
+/*-----modules indv----*/
+/* Apply workspace button styling to ALL modules */
+#workspaces button,
+#clock,
+#custom-temp,
+#cpu,
+#memory,
+#tray,
+#pulseaudio,
+#custom-button {
+padding: 0px 6px;    /* Reduced horizontal padding */
+margin: 4px 2px;     /* Reduced margins - less space between modules */
+border-radius: 14px;
+background: @background;
+color: @foreground;
+font-weight: 700;
+transition: all 0.3s ease;
+outline: none;
+box-shadow: none;
+text-shadow: none;
+border: none;
+font-size: 14px;
+}
+
+/* Active workspace button styling - same width as hover but slightly shorter */
+#workspaces button.active {
+padding: 0px 6px;    /* Reduced horizontal padding */
+margin: 3px 2px;     /* Reduced margins */
+border-radius: 14px;
+background: @color12;
+color: @foreground;
+font-weight: 700;
+font-size: 16px;
+transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Hover effects for ALL modules - taller with bigger text */
+#workspaces button:hover,
+#clock:hover,
+#custom-temp:hover,
+#cpu:hover,
+#memory:hover,
+#tray:hover,
+#pulseaudio:hover,
+#custom-button:hover {
+padding: 2px 6px;    /* Reduced horizontal padding */
+margin: 2px 2px;     /* Reduced margins */
+border-radius: 14px;
+background: @color12;
+color: @foreground;
+font-weight: 700;
+transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+font-size: 16px;
+}
+
